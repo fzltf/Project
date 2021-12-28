@@ -1,0 +1,69 @@
+pilihan = "Y"
+while pilihan=="Y":
+    print("""
+    ==============================
+               Cafe IT
+    ==============================
+        List Menu Minuman Kopi
+    ------------------------------
+    1. ES Kopi Susu : Rp 11.000
+    2. ES Kopi Coklat : Rp 12.000
+    3. ES Kopi Hitam : Rp 11.000
+    4. Ice Americano : Rp 14.000
+    ------------------------------
+    """)
+     pesan=str(input("masukan menu kopi ="))
+    jumlahpesan=int(input("masukkan jumlah pesanan ="))
+    if pesan == "1":
+        nama_menu = "ES Kopi Susu"
+        harga=(11000*jumlahpesan)
+        ppn= int(harga * 0.1)
+        if jumlahpesan >= 5:
+            diskon = int(harga*0.2)
+            totalharga=int(harga-diskon+ppn)
+        else:
+            diskon =(0)
+            totalharga=int(harga+ppn)
+    elif pesan == "2":
+        nama_menu= "ES Kopi Coklat"
+        harga = (12000*jumlahpesan)
+        ppn = int(harga * 0.1)
+         if jumlahpesan >= 5:
+            diskon = int(harga * 0.2)
+            totalharga =int(harga-diskon+ppn)
+        else:
+            diskon =(0)
+            totalharga =int(harga+ppn)
+    elif pesan == "3":
+        nama_menu= "ES Kopi Hitam"
+        harga=int(11000*jumlahpesan)
+        ppn = int(harga * 0.1)
+        diskon=0
+        totalharga=int(harga+ppn)
+    elif pesan == "4":
+        nama_menu= "ES Americano"
+        harga=int(14000*jumlahpesan)
+        ppn = int(harga * 0.1)
+        diskon=0
+        totalharga = int(harga+ppn)
+        else:
+        nama_menu = "-"
+        harga = "-"
+        ppn = "-"
+        diskon = "-"
+        totalharga = "-"
+        pilihan=input("menu tidak tersedia, silahkan masukkan menu yang tersedia silahkan ulangi kembali Y/N =")
+ 
+    print("--------------------------")
+    print("|        Cafe IT         |")
+    print("--------------------------")
+    print("Menu :",nama_menu)
+    print("Jumlah Pesan :", jumlahpesan)
+    print("Harga :", harga)
+    print("Diskon :", diskon)
+    print("PPN 10% :", ppn)
+    print("--------------------------")
+    print("Jumlah Bayar :", totalharga)
+    print("--------------------------")
+    print("       TERIMA KASIH       ")
+    pilihan=input("apakah anda ingin order kembali Y/N =")
