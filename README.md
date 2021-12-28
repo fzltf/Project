@@ -1,2 +1,2 @@
 # Project
-Project UAS Pemrograman Sederhana
+Project Kelompok Pemrograman Sederhana ( UAS )
